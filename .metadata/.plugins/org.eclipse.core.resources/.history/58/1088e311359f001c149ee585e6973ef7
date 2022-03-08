@@ -1,0 +1,25 @@
+package dominio;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	    Scanner leitor= new Scanner(System.in);
+		Curso curso=new Curso();
+		Mentoria mentoria=new Mentoria();
+		
+		String nomeCurso;
+		String descricaoCurso;
+		int cargaHoraria;
+		
+		System.out.println("---Cadastrar Curso---");
+		System.out.println("Digite o Nome do curso:");
+		nomeCurso=leitor.next();
+		System.out.println("Digite a descriçao do curso:");
+		System.out.println ("Digite a Carga Horária:");
+		
+	}
+
+}

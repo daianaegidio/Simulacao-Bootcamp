@@ -1,0 +1,18 @@
+package dominio;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Curso curso=new Curso();
+		
+		
+		curso.setTitulo("Curso Java");
+		curso.setDescricao("Descricao curso java");
+		curso.setCargaHoraria(8);
+		
+		System.out.println(curso);
+
+	}
+
+}

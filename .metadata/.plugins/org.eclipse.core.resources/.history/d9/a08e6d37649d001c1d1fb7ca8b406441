@@ -1,0 +1,43 @@
+package dominio;
+
+import java.time.LocalDate;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Curso curso=new Curso();
+		Mentoria mentoria=new Mentoria();
+		
+		curso.setTitulo("Curso Java");
+		curso.setDescricao("Descricao curso java");
+		curso.setCargaHoraria(8);
+		
+		mentoria.setTitulo("Mentoria Java");
+		mentoria.setDescricao("Descricao mentoria Java ");
+		mentoria.setData(LocalDate.now());//a data adicionada é a data na hora que é criada
+		
+		/*System.out.println(curso);
+		System.out.println(mentoria);*/
+		
+		Bootcamp bootcamp= new Bootcamp();
+		bootcamp.setNome("Bootcamp Java Developer");
+		bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+		bootcamp.getConteudos().add(mentoria);
+		bootcamp.getConteudos().add(curso);
+		
+		Dev devMatheus=new Dev();
+		devMatheus.setNome("Matheus");
+		devMatheus.inscreverBootcamp(bootcamp);
+System.out.println("Conteudos Inscritos" + devMatheus.getConteudosInscritos());
+devMatheus.progredir();
+System.out.println("Conteudos Concluidos" + devMatheus.getConteudosConcluidos());
+		
+
+
+		Dev devLucas=new Dev();
+		devLucas.setNome("Lucas");
+		System.out.println("Conteudos Inscritos" + devLucas.getConteudosInscritos());
+	}
+
+}
